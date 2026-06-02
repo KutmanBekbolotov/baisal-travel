@@ -16,7 +16,7 @@ export function Header({ activePage, onNavigate }: HeaderProps) {
         aria-label="Перейти на главную"
       >
         <span className="brand-mark">NT</span>
-        <span>NovaTravel</span>
+        <span>BaisalTravel</span>
       </button>
 
       <nav className="main-nav" aria-label="Основная навигация">

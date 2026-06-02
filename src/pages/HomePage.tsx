@@ -22,7 +22,7 @@ function HomePage({ onNavigate }: HomePageProps) {
 
         <div className="hero-content">
           <p className="eyebrow">Travel company / 2026</p>
-          <h1>NovaTravel</h1>
+          <h1>BaisalTravel</h1>
           <p className="hero-copy">
             Собираем премиальные путешествия как интерфейс будущего: быстро,
             прозрачно и точно под ваш стиль отдыха.
