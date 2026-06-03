@@ -33,7 +33,7 @@ export function Header({ activePage, onNavigate }: HeaderProps) {
       </nav>
 
       <button className="header-cta" type="button" onClick={() => onNavigate('contacts')}>
-        Связаться с нами
+        Заказать трансфер
       </button>
     </header>
   )

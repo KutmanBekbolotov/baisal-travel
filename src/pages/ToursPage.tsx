@@ -1,35 +1,59 @@
-import { tours } from '../shared/model/travel'
+import { fleetOptions, transferRoutes } from '../shared/model/travel'
+import type { PageId } from '../shared/model/navigation'
 
-export function ToursPage() {
+type ToursPageProps = {
+  onNavigate: (page: PageId) => void
+}
+
+export function ToursPage({ onNavigate }: ToursPageProps) {
   return (
     <main className="page-shell">
       <section className="page-hero compact">
-        <p className="eyebrow">Route catalog</p>
-        <h1>Маршруты</h1>
+        <p className="eyebrow">Transfers in Kyrgyzstan</p>
+        <h1>Трансферы по Кыргызстану</h1>
         <p>
-          Подборка авторских направлений с детальным планированием, прозрачной
-          стоимостью и поддержкой на каждом этапе.
+          Организуем перевозки для частных клиентов, туристических групп и
+          компаний: от комфортных седанов до микроавтобусов и больших автобусов.
         </p>
       </section>
 
+      <section className="transfer-overview" aria-label="Варианты транспорта">
+        {fleetOptions.map((item) => (
+          <article className="fleet-card" key={item.title}>
+            <span>{item.capacity}</span>
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+          </article>
+        ))}
+      </section>
+
       <section className="tour-list">
-        {tours.map((tour) => (
-          <article className="route-card" key={tour.title}>
-            <img src={tour.image} alt={tour.location} />
+        {transferRoutes.map((route) => (
+          <article className="route-card" key={route.title}>
+            <img src={route.image} alt={route.title} />
             <div>
-              <span className="route-location">{tour.location}</span>
-              <h2>{tour.title}</h2>
-              <p>
-                {tour.days} / {tour.price}
-              </p>
+              <span className="route-location">{route.region}</span>
+              <h2>{route.title}</h2>
+              <p className="route-meta">{route.vehicle}</p>
+              <p>{route.note}</p>
               <ul>
-                {tour.highlights.map((highlight) => (
+                {route.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
                 ))}
               </ul>
             </div>
           </article>
         ))}
+      </section>
+
+      <section className="transfer-request">
+        <div>
+          <p className="eyebrow">Custom transfer</p>
+          <h2>Нужен другой маршрут или большой автобус?</h2>
+        </div>
+        <button className="primary-btn" type="button" onClick={() => onNavigate('contacts')}>
+          Рассчитать поездку
+        </button>
       </section>
     </main>
   )

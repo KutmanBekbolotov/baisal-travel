@@ -3,15 +3,15 @@ export function ContactsPage() {
     <main className="page-shell">
       <section className="contact-layout">
         <div>
-          <p className="eyebrow">Start planning</p>
-          <h1>Соберем ваш маршрут</h1>
+          <p className="eyebrow">Transfer request</p>
+          <h1>Рассчитаем вашу поездку</h1>
           <p>
-            Напишите направление, даты и примерный бюджет. Мы вернемся с первой
-            концепцией поездки в течение рабочего дня.
+            Напишите направление, дату, время подачи и количество пассажиров.
+            Мы подберем транспорт и вернемся с расчетом в течение рабочего дня.
           </p>
           <div className="contact-card">
-            <span>Travel desk</span>
-            <a href="mailto:hello@novatravel.test">hello@novatravel.test</a>
+            <span>Dispatch desk</span>
+            <a href="mailto:baisaltravel@gmail.com">baisaltravel@gmail.com</a>
             <a href="tel:+996700000000">+996 700 000 000</a>
           </div>
         </div>
@@ -23,7 +23,7 @@ export function ContactsPage() {
           </label>
           <label>
             Направление
-            <input type="text" placeholder="Например, Япония или Норвегия" />
+            <input type="text" placeholder="Например, Бишкек - Каракол" />
           </label>
           <label>
             Сообщение

@@ -279,7 +279,9 @@
 
 .section h2,
 .about-grid h2,
-.route-card h2 {
+.route-card h2,
+.fleet-card h2,
+.transfer-request h2 {
   margin: 0;
   color: var(--text-strong);
   font-size: clamp(28px, 4vw, 48px);
@@ -298,6 +300,7 @@
 
 .tour-card,
 .route-card,
+.fleet-card,
 .about-grid article,
 .contact-card,
 .lead-form {
@@ -323,6 +326,7 @@
 
 .tour-card-body span,
 .route-location,
+.fleet-card span,
 .about-grid span,
 .contact-card span {
   color: var(--accent);
@@ -386,6 +390,23 @@
   max-width: 760px;
 }
 
+.transfer-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.fleet-card {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+}
+
+.fleet-card h2 {
+  font-size: 28px;
+}
+
 .tour-list {
   display: grid;
   gap: 18px;
@@ -421,6 +442,27 @@
   border-radius: 999px;
   color: var(--text-strong);
   background: rgba(255, 255, 255, 0.06);
+}
+
+.route-meta {
+  margin: 14px 0 8px;
+  color: var(--text-strong);
+  font-weight: 800;
+}
+
+.transfer-request {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-top: 34px;
+  padding: 28px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.transfer-request h2 {
+  max-width: 720px;
+  font-size: clamp(28px, 4vw, 44px);
 }
 
 .about-grid {
@@ -543,6 +585,7 @@
 
   .stats-strip,
   .tour-grid,
+  .transfer-overview,
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -557,6 +600,7 @@
   }
 
   .section-heading,
+  .transfer-request,
   .site-footer {
     align-items: flex-start;
     flex-direction: column;

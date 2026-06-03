@@ -1,50 +1,74 @@
-export type Tour = {
+export type TransferRoute = {
   title: string
-  location: string
-  days: string
-  price: string
+  region: string
+  vehicle: string
+  note: string
   image: string
   highlights: string[]
 }
 
-export const tours: Tour[] = [
+export type FleetOption = {
+  title: string
+  capacity: string
+  description: string
+}
+
+export const transferRoutes: TransferRoute[] = [
   {
-    title: 'Aurora Fjords',
-    location: 'Норвегия',
-    days: '7 дней',
-    price: 'от $2 140',
+    title: 'Бишкек - Иссык-Куль',
+    region: 'Чолпон-Ата / Бостери / Каракол',
+    vehicle: 'Седан, минивэн или микроавтобус',
+    note: 'Ежедневные поездки для семей, компаний и туристических групп',
     image:
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
-    highlights: ['ледниковый круиз', 'северное сияние', 'smart-гид 24/7'],
+      'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80',
+    highlights: ['встреча у адреса', 'остановки по пути', 'багаж и детские кресла по запросу'],
   },
   {
-    title: 'Neo Tokyo Pulse',
-    location: 'Япония',
-    days: '9 дней',
-    price: 'от $2 880',
+    title: 'Аэропорт Манас',
+    region: 'Встреча и проводы',
+    vehicle: 'Комфорт-класс, минивэн, Sprinter',
+    note: 'Подача к рейсу, табличка для гостей и помощь с багажом',
     image:
-      'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80',
-    highlights: ['ночной Токио', 'гастротуры', 'капсульные отели premium'],
+      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
+    highlights: ['контроль времени прилета', 'ночные рейсы', 'поездки в Бишкек и регионы'],
   },
   {
-    title: 'Glass Desert',
-    location: 'ОАЭ',
-    days: '5 дней',
-    price: 'от $1 590',
+    title: 'Бишкек - Ош',
+    region: 'Межгород по южной трассе',
+    vehicle: 'Минивэн или автобус под группу',
+    note: 'Перевозки между городами с расчетом маршрута под состав пассажиров',
     image:
-      'https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=80',
-    highlights: ['дюны на рассвете', 'яхта', 'AR-маршрут по городу'],
+      'https://images.pexels.com/photos/17455632/pexels-photo-17455632.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    highlights: ['опытные водители', 'план остановок', 'рейсы для командировок и групп'],
+  },
+]
+
+export const fleetOptions: FleetOption[] = [
+  {
+    title: 'Седаны',
+    capacity: '1-3 пассажира',
+    description: 'Для аэропорта, деловых поездок, встреч гостей и быстрых трансферов по городу.',
+  },
+  {
+    title: 'Минивэны',
+    capacity: '4-7 пассажиров',
+    description: 'Удобный формат для семьи, небольшой группы, туристов с багажом и дальних поездок.',
+  },
+  {
+    title: 'Микроавтобусы и автобусы',
+    capacity: '8-50 пассажиров',
+    description: 'Для корпоративных выездов, экскурсий, свадеб, спортивных команд и больших групп.',
   },
 ]
 
 export const stats = [
-  { value: '42', label: 'страны в подборке' },
-  { value: '18k', label: 'путешественников' },
-  { value: '4.9', label: 'средняя оценка' },
+  { value: '24/7', label: 'прием заявок и рейсов' },
+  { value: '1-50', label: 'мест под любой состав' },
+  { value: '7', label: 'областей Кыргызстана' },
 ]
 
 export const services = [
-  'AI-подбор маршрута под бюджет, даты и ритм отдыха',
-  'Отели, трансферы, визовая поддержка и страховка в одном плане',
-  'Персональный тревел-оператор на связи до возвращения домой',
+  'Подбираем транспорт под количество пассажиров, багаж и дальность поездки',
+  'Встречаем в аэропорту, у отеля, офиса или дома с точной подачей ко времени',
+  'Согласуем маршрут, остановки, обратную дорогу и сопровождение группы заранее',
 ]

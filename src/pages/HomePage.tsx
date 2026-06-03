@@ -1,4 +1,4 @@
-import { services, stats, tours } from '../shared/model/travel'
+import { services, stats, transferRoutes } from '../shared/model/travel'
 import type { PageId } from '../shared/model/navigation'
 
 type HomePageProps = {
@@ -20,24 +20,23 @@ function HomePage({ onNavigate }: HomePageProps) {
             <source src="/hero-timelapse.webm" type="video/webm" />
           </video>
           <div className="orbit-panel">
-            <span>Live route scan</span>
+            <span>Live trip check</span>
             <strong>98% match</strong>
           </div>
         </div>
 
         <div className="hero-content">
-          <p className="eyebrow">Travel company / 2026</p>
+          <p className="eyebrow">Transfers in Kyrgyzstan / 2026</p>
           <h1>BaisalTravel</h1>
           <p className="hero-copy">
-            Собираем премиальные путешествия как интерфейс будущего: быстро,
-            прозрачно и точно под ваш стиль отдыха.
+            Мечты сбываются с нами.
           </p>
           <div className="hero-actions">
             <button className="primary-btn" type="button" onClick={() => onNavigate('tours')}>
-              Смотреть маршруты
+              Смотреть трансферы
             </button>
             <button className="ghost-btn" type="button" onClick={() => onNavigate('contacts')}>
-              Собрать тур
+              Заказать поездку
             </button>
           </div>
         </div>
@@ -54,18 +53,18 @@ function HomePage({ onNavigate }: HomePageProps) {
 
       <section className="section">
         <div className="section-heading">
-          <p className="eyebrow">Featured routes</p>
-          <h2>Туры, которые выглядят как следующий уровень отпуска</h2>
+          <p className="eyebrow">Popular transfers</p>
+          <h2>Направления, где важны пунктуальность, комфорт и надежный водитель</h2>
         </div>
         <div className="tour-grid">
-          {tours.slice(0, 3).map((tour) => (
-            <article className="tour-card" key={tour.title}>
-              <img src={tour.image} alt={tour.location} />
+          {transferRoutes.slice(0, 3).map((route) => (
+            <article className="tour-card" key={route.title}>
+              <img src={route.image} alt={route.title} />
               <div className="tour-card-body">
-                <span>{tour.location}</span>
-                <h3>{tour.title}</h3>
+                <span>{route.region}</span>
+                <h3>{route.title}</h3>
                 <p>
-                  {tour.days} / {tour.price}
+                  {route.vehicle}
                 </p>
               </div>
             </article>
@@ -76,7 +75,7 @@ function HomePage({ onNavigate }: HomePageProps) {
       <section className="section split-section">
         <div>
           <p className="eyebrow">How it works</p>
-          <h2>Технологичный маршрут без холодного сервиса</h2>
+          <h2>Перевозка людей по республике без лишней суеты</h2>
         </div>
         <div className="service-list">
           {services.map((service, index) => (

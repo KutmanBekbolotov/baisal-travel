@@ -17,7 +17,7 @@ function App() {
   const renderPage = () => {
     switch (activePage) {
       case 'tours':
-        return <ToursPage />
+        return <ToursPage onNavigate={setActivePage} />
       case 'about':
         return <AboutPage />
       case 'contacts':
