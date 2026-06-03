@@ -29,7 +29,7 @@ export const transferRoutes: TransferRoute[] = [
     vehicle: 'Комфорт-класс, минивэн, Sprinter',
     note: 'Подача к рейсу, табличка для гостей и помощь с багажом',
     image:
-      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
+      'https://thanhnien.mediacdn.vn/Uploaded/bahung/2021_12_21/sedan-hang-d-tai-viet-nam-thanhnien-7-4264.jpg',
     highlights: ['контроль времени прилета', 'ночные рейсы', 'поездки в Бишкек и регионы'],
   },
   {
@@ -38,7 +38,7 @@ export const transferRoutes: TransferRoute[] = [
     vehicle: 'Минивэн или автобус под группу',
     note: 'Перевозки между городами с расчетом маршрута под состав пассажиров',
     image:
-      'https://images.pexels.com/photos/17455632/pexels-photo-17455632.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://temsaspain.es/wp-content/uploads/2021/03/Temsa_HD13M_6174_on_3e4_alt_v005-1-scaled.jpg',
     highlights: ['опытные водители', 'план остановок', 'рейсы для командировок и групп'],
   },
 ]
