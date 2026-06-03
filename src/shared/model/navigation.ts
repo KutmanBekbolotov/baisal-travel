@@ -8,6 +8,6 @@ export type NavItem = {
 export const navItems: NavItem[] = [
   { id: 'home', label: 'Главная' },
   { id: 'tours', label: 'Маршруты' },
-  { id: 'about', label: 'О нас' },
+  { id: 'about', label: 'O\u00a0нас' },
   { id: 'contacts', label: 'Контакты' },
 ]

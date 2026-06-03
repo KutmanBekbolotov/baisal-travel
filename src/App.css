@@ -44,6 +44,7 @@
   margin: 0 auto;
   padding: 18px 0;
   backdrop-filter: blur(18px);
+  border-radius: 20px;
 }
 
 .brand,
@@ -571,6 +572,13 @@
     display: none;
   }
 
+  .main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 15px;
+}
+
   .hero-content h1 {
     font-size: 54px;
   }
@@ -596,4 +604,45 @@
   .page-shell {
     padding-block: 56px;
   }
+  
+}
+
+@media (max-width: 390px) {
+  .header-cta {
+    display: none;
+  }
+
+  .main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  font-size: 14px;
+}
+
+  .hero-content h1 {
+    font-size: 54px;
+  }
+
+  .hero-copy,
+  .page-hero p,
+  .contact-layout p {
+    font-size: 17px;
+  }
+
+  .hero-actions,
+  .primary-btn,
+  .ghost-btn {
+    width: 100%;
+  }
+
+  .primary-btn,
+  .ghost-btn {
+    justify-content: center;
+  }
+
+  .section,
+  .page-shell {
+    padding-block: 56px;
+  }
+  
 }
