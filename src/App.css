@@ -1,10 +1,35 @@
 .app {
+  position: relative;
+  isolation: isolate;
   min-height: 100svh;
   overflow: hidden;
+  background: #071112;
+}
+
+.app::after {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: '';
   background:
-    radial-gradient(circle at 14% 10%, rgba(34, 211, 238, 0.18), transparent 28rem),
-    radial-gradient(circle at 92% 18%, rgba(163, 230, 53, 0.12), transparent 24rem),
-    linear-gradient(135deg, #071112 0%, #10191a 48%, #150f14 100%);
+    radial-gradient(circle at 16% 12%, rgba(103, 232, 249, 0.18), transparent 30rem),
+    radial-gradient(circle at 84% 18%, rgba(190, 242, 100, 0.1), transparent 28rem),
+    linear-gradient(135deg, rgba(7, 17, 18, 0.36), rgba(7, 17, 18, 0.82) 58%, rgba(21, 15, 20, 0.92));
+}
+
+.app-background {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.56;
+}
+
+.site-header,
+.app > main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .site-header {
@@ -171,7 +196,8 @@
   background-size: 54px 54px, 54px 54px, auto;
 }
 
-.hero-media img {
+.hero-media video {
+  display: block;
   width: 100%;
   height: 100%;
   min-height: 560px;
@@ -510,7 +536,7 @@
     min-height: 380px;
   }
 
-  .hero-media img {
+  .hero-media video {
     min-height: 380px;
   }
 

@@ -10,10 +10,15 @@ function HomePage({ onNavigate }: HomePageProps) {
     <main>
       <section className="hero-section">
         <div className="hero-media" aria-hidden="true">
-          <img
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80"
-            alt=""
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80"
+          >
+            <source src="/hero-timelapse.webm" type="video/webm" />
+          </video>
           <div className="orbit-panel">
             <span>Live route scan</span>
             <strong>98% match</strong>
