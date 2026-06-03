@@ -1,3 +1,6 @@
+import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 export function ContactsPage() {
   return (
     <main className="page-shell">
@@ -17,21 +20,11 @@ export function ContactsPage() {
         </div>
 
         <form className="lead-form">
-          <label>
-            Имя
-            <input type="text" placeholder="Как к вам обращаться" />
-          </label>
-          <label>
-            Направление
-            <input type="text" placeholder="Например, Япония или Норвегия" />
-          </label>
-          <label>
-            Сообщение
-            <textarea rows={5} placeholder="Даты, состав группы, пожелания" />
-          </label>
-          <button className="primary-btn" type="button">
-            Отправить заявку
-          </button>
+          <div className="social__container">
+              <a href="instagram.com" ><FaInstagram size="30px" className="inst-icon"/></a>  
+              <a href="whatsApp.com" ><FaWhatsapp size="30px"  className="whats-icon"/></a>  
+              <a href="phone.com" ><FaPhoneAlt size="25px" className="phone-icon" /></a> 
+          </div>
         </form>
       </section>
     </main>
