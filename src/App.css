@@ -531,6 +531,29 @@
 .lead-form input::placeholder,
 .lead-form textarea::placeholder {
   color: rgba(229, 231, 235, 0.44);
+  justife;
+}
+
+.inst-icon{
+  size: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.whats-icon{
+  size: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.phone-icon{
+  padding-top: 2px;
+  size: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.social__container{
+  display: flex;
+  padding: 0 10px;
+  gap: 50px;
 }
 
 .site-footer {
