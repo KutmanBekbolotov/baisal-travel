@@ -25,7 +25,6 @@
   opacity: 0.56;
 }
 
-.site-header,
 .app > main,
 .site-footer {
   position: relative;
@@ -34,16 +33,18 @@
 
 .site-header {
   position: sticky;
-  top: 0;
-  z-index: 10;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 24px;
+  top: 15px;
+  z-index: 110;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 18px 0;
-  backdrop-filter: blur(18px);
+  padding: 12px 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.186);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
 }
 
@@ -91,12 +92,19 @@
   border-radius: 999px;
   color: var(--text-muted);
   background: rgba(255, 255, 255, 0.06);
+  transition: all 0.2s;
 }
 
 .nav-link.active,
 .nav-link:hover {
   color: var(--text-strong);
   background: rgba(255, 255, 255, 0.14);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .header-cta,
@@ -117,6 +125,108 @@
   border-radius: 999px;
   color: var(--text-strong);
   background: rgba(255, 255, 255, 0.06);
+}
+
+.burger-trigger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger-trigger.open .burger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background: #a3ff73;
+}
+
+.burger-trigger.open .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-trigger.open .burger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  background: #a3ff73;
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: min(360px, 100vw);
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.186);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 100px 30px 40px 40px;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.374);
+  box-sizing: border-box;
+  z-index: 105;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.burger-menu.visible {
+  transform: translateX(-100%);
+}
+
+.burger-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-main-links {
+  display: none; 
+  flex-direction: column;
+  gap: 16px;
+}
+
+.burger-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.burger-link {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.burger-link.active {
+  color: #a3ff73;
+}
+
+.burger-link:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+  text-shadow: 0 0 10px rgba(163, 255, 115, 0.4);
 }
 
 .hero-section {
@@ -217,7 +327,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   background: rgba(7, 17, 18, 0.72);
-  backdrop-filter: blur(18px);
+
 }
 
 .orbit-panel span {
@@ -296,6 +406,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+  
 }
 
 .tour-card,
@@ -306,8 +417,9 @@
 .lead-form {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(0, 0, 0, 0.186);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(10px);
 }
 
 .tour-card {
@@ -395,6 +507,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   margin-bottom: 28px;
+
 }
 
 .fleet-card {
@@ -417,6 +530,7 @@
   grid-template-columns: minmax(220px, 0.45fr) 1fr;
   gap: 24px;
   padding: 16px;
+
 }
 
 .route-card img {
@@ -469,6 +583,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+
 }
 
 .about-grid article {
@@ -531,29 +646,34 @@
 .lead-form input::placeholder,
 .lead-form textarea::placeholder {
   color: rgba(229, 231, 235, 0.44);
-  justife;
-}
-
-.inst-icon{
-  size: 50px;
-  color: rgb(255, 255, 255);
-}
-
-.whats-icon{
-  size: 50px;
-  color: rgb(255, 255, 255);
-}
-
-.phone-icon{
-  padding-top: 2px;
-  size: 50px;
-  color: rgb(255, 255, 255);
 }
 
 .social__container{
   display: flex;
   padding: 0 10px;
   gap: 50px;
+}
+
+.social-info{
+  display: flex;
+  flex-direction: column;
+  gap: -5px;
+}
+
+.inst-icon,
+.whats-icon,
+.phone-icon {
+  color: rgb(255, 255, 255);
+}
+
+.phone-icon{
+  padding-top: 2px;
+}
+
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
 .site-footer {
@@ -569,20 +689,21 @@
 
 .footer-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 @media (max-width: 860px) {
-  .site-header {
-    grid-template-columns: 1fr auto;
+  .burger-menu {
+    background: rgba(18, 24, 22, 0.63); 
   }
 
   .main-nav {
-    grid-column: 1 / -1;
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 4px;
+    display: none;
+  }
+  
+  .mobile-main-links {
+    display: flex; 
   }
 
   .hero-section,
@@ -635,16 +756,13 @@
 }
 
 @media (max-width: 560px) {
+  .burger-menu {
+    background: rgba(18, 24, 22, 0.816); 
+  }
+
   .header-cta {
     display: none;
   }
-
-  .main-nav {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  font-size: 15px;
-}
 
   .hero-content h1 {
     font-size: 54px;
@@ -671,45 +789,10 @@
   .page-shell {
     padding-block: 56px;
   }
-  
 }
 
 @media (max-width: 390px) {
-  .header-cta {
-    display: none;
-  }
-
-  .main-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1px;
-  font-size: 14px;
-}
-
   .hero-content h1 {
-    font-size: 54px;
+    font-size: 42px;
   }
-
-  .hero-copy,
-  .page-hero p,
-  .contact-layout p {
-    font-size: 17px;
-  }
-
-  .hero-actions,
-  .primary-btn,
-  .ghost-btn {
-    width: 100%;
-  }
-
-  .primary-btn,
-  .ghost-btn {
-    justify-content: center;
-  }
-
-  .section,
-  .page-shell {
-    padding-block: 56px;
-  }
-  
 }

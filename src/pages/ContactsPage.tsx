@@ -22,9 +22,24 @@ export function ContactsPage() {
         <form className="lead-form">
 
           <div className="social__container">
-              <a href="instagram.com" ><FaInstagram size="30px" className="inst-icon"/></a>  
-              <a href="whatsApp.com" ><FaWhatsapp size="30px"  className="whats-icon"/></a>  
-              <a href="phone.com" ><FaPhoneAlt size="25px" className="phone-icon" /></a> 
+
+            <div className="social-info">
+              <h1>Исполним вашу мечту</h1>
+              <h2>Путешествуйте вместе с нами</h2>
+              <h2>
+                Наш адрес:
+                ул.Аалы Токомбаева 21/2 (отель Jannat Regency 5*)
+              </h2>
+              
+              <div className="social-icons">
+                <a href="instagram.com" ><FaInstagram size="30px" className="inst-icon"/></a>  
+                <a href="whatsApp.com" ><FaWhatsapp size="30px"  className="whats-icon"/></a>  
+                <a href="phone.com" ><FaPhoneAlt size="25px" className="phone-icon" /></a>
+              </div>
+           
+            </div>
+         
+               
           </div>
 
         </form>
