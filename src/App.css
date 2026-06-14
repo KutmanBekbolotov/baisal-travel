@@ -415,11 +415,26 @@
 .about-grid article,
 .contact-card,
 .lead-form {
+  transition: all;
+  transition: 500ms;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.186);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(10px);
+}
+
+.tour-card:hover,
+.route-card:hover,
+.fleet-card:hover,
+.about-grid:hover article,
+.contact-card:hover,
+.lead-form:hover {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.401);
+  box-shadow: 0 24px 70px rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
 }
 
 .tour-card {
