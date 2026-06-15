@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Header } from '../widgets/Header/Header'
 import { Footer } from '../widgets/Footer/Footer'
 import HomePage from '../pages/HomePage'
+import { TransferPage } from '../pages/TransferPage'
 import { ToursPage } from '../pages/ToursPage'
 import { AboutPage } from '../pages/AboutPage'
 import { ContactsPage } from '../pages/ContactsPage'
@@ -22,15 +23,16 @@ function App() {
 
   const renderPage = () => {
     switch (activePage) {
-      case 'tours':
       case 'transfers':
-        return <ToursPage onNavigate={setActivePage} />
+        return <TransferPage onNavigate={setActivePage} />
       case 'about':
         return <AboutPage />
       case 'contacts':
         return <ContactsPage />
       case 'BMtours':
         return <BMtoursPage />
+      case 'tours':
+        return <ToursPage />
       case 'BMtickets':
         return <BMticketsPage />
       case 'BMinsurance':

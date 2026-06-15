@@ -23,12 +23,12 @@ export function ContactsPage() {
         <div className="lead-form">
           <div className="social__container">
             <div className="social-info">
-              <h1>Исполним вашу мечту</h1>
+              <h2>Исполним вашу мечту</h2>
               <h2>Путешествуйте вместе с нами</h2>
-              <h2>
+              <h3>
                 Наш адрес:
                 ул.Аалы Токомбаева 21/2 (отель Jannat Regency 5*)
-              </h2>
+              </h3>
 
               <div className="social-icons">
                 <a href="https://instagram.com" aria-label="Instagram">

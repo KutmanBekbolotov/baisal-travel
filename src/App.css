@@ -464,7 +464,7 @@ body {
   max-width: 780px;
   margin: 0;
   color: var(--text-strong);
-  font-size: clamp(54px, 9vw, 132px);
+  font-size: clamp(58px, 9vw, 115px);
   line-height: 0.88;
   letter-spacing: -0.03em;
 }
@@ -472,11 +472,12 @@ body {
 
 .hero-content h1 {
   background: linear-gradient(135deg, #f9fafb 30%, #67e8f9 65%, #bef264 85%, #f9fafb 100%);
-  background-size: 200% 100%;
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: shimmer-text 8s ease-in-out infinite;
+
 }
 
 @keyframes shimmer-text {
@@ -1115,6 +1116,21 @@ body {
 
 .footer-links a:hover { color: var(--text-strong); }
 
+.world-map{
+  margin: 40px 0;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(17, 36, 51, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s;
+}
+
+.world-map:hover{
+  background: rgba(7, 17, 18, 0.116);
+  backdrop-filter: blur(16px);
+}
 
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(24px); }

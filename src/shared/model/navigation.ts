@@ -1,4 +1,4 @@
-export type PageId = 'home' | 'transfers' | 'about' | 'contacts' | 'tours' | 'BMtours' | 'BMtickets' | 'BMinsurance' | 'BMvisa' | 'BMhotels' | 'BMvip-transfers'
+export type PageId = 'home' | 'transfers' | 'about' | 'contacts' |  "tours" | 'BMtours' | 'BMtickets' | 'BMinsurance' | 'BMvisa' | 'BMhotels' | 'BMvip-transfers'
 
 export type NavItem = {
   id: PageId
@@ -7,7 +7,8 @@ export type NavItem = {
 
 export const navItems: NavItem[] = [
   { id: 'home', label: 'Главная' },
-  { id: 'tours', label: 'Трансферы' },
+  { id: 'transfers', label: 'Трансферы' },
+  { id: 'tours', label: 'Туры' },
   { id: 'about', label: 'O нас' },
   { id: 'contacts', label: 'Контакты' },
 ]
