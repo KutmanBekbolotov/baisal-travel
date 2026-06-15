@@ -1,6 +1,7 @@
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
+
 export function ContactsPage() {
   return (
     <main className="page-shell">
@@ -19,10 +20,8 @@ export function ContactsPage() {
           </div>
         </div>
 
-        <form className="lead-form">
-
+        <div className="lead-form">
           <div className="social__container">
-
             <div className="social-info">
               <h1>Исполним вашу мечту</h1>
               <h2>Путешествуйте вместе с нами</h2>
@@ -30,19 +29,21 @@ export function ContactsPage() {
                 Наш адрес:
                 ул.Аалы Токомбаева 21/2 (отель Jannat Regency 5*)
               </h2>
-              
-              <div className="social-icons">
-                <a href="instagram.com" ><FaInstagram size="30px" className="inst-icon"/></a>  
-                <a href="whatsApp.com" ><FaWhatsapp size="30px"  className="whats-icon"/></a>  
-                <a href="phone.com" ><FaPhoneAlt size="25px" className="phone-icon" /></a>
-              </div>
-           
-            </div>
-         
-               
-          </div>
 
-        </form>
+              <div className="social-icons">
+                <a href="https://instagram.com" aria-label="Instagram">
+                  <FaInstagram size="20px" className="inst-icon" />
+                </a>
+                <a href="https://wa.me/" aria-label="WhatsApp">
+                  <FaWhatsapp size="20px" className="whats-icon" />
+                </a>
+                <a href="tel:+996700000000" aria-label="Phone">
+                  <FaPhoneAlt size="18px" className="phone-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )

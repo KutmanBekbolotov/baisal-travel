@@ -59,13 +59,13 @@ function HomePage({ onNavigate }: HomePageProps) {
         <div className="tour-grid">
           {transferRoutes.slice(0, 3).map((route) => (
             <article className="tour-card" key={route.title}>
-              <img src={route.image} alt={route.title} />
+              <div className="tour-card-img-wrap">
+                <img src={route.image} alt={route.title} />
+              </div>
               <div className="tour-card-body">
                 <span>{route.region}</span>
                 <h3>{route.title}</h3>
-                <p>
-                  {route.vehicle}
-                </p>
+                <p>{route.vehicle}</p>
               </div>
             </article>
           ))}
