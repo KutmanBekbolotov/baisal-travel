@@ -32,7 +32,7 @@ function App() {
       case 'BMtours':
         return <BMtoursPage />
       case 'tours':
-        return <ToursPage />
+        return <ToursPage onNavigate={setActivePage} />
       case 'BMtickets':
         return <BMticketsPage />
       case 'BMinsurance':
