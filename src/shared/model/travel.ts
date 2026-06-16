@@ -1,3 +1,5 @@
+import type { PageId } from './navigation'
+
 export type TransferRoute = {
   title: string
   region: string
@@ -11,6 +13,21 @@ export type FleetOption = {
   title: string
   capacity: string
   description: string
+}
+
+export type CompanyService = {
+  id: PageId
+  title: string
+  kicker: string
+  description: string
+  image: string
+  details: string[]
+}
+
+export type HomeExperience = {
+  title: string
+  text: string
+  image: string
 }
 
 export const transferRoutes: TransferRoute[] = [
@@ -62,15 +79,124 @@ export const fleetOptions: FleetOption[] = [
 ]
 
 export const stats = [
-  { value: '24/7', label: 'прием заявок и рейсов' },
-  { value: '1-50', label: 'мест под любой состав' },
-  { value: '7', label: 'областей Кыргызстана' },
+  { value: '7', label: 'ключевых направлений сервиса' },
+  { value: '24/7', label: 'поддержка до и во время поездки' },
+  { value: '1-50', label: 'пассажиров в индивидуальных трансферах' },
 ]
 
 export const services = [
   'Подбираем транспорт под количество пассажиров, багаж и дальность поездки',
   'Встречаем в аэропорту, у отеля, офиса или дома с точной подачей ко времени',
   'Согласуем маршрут, остановки, обратную дорогу и сопровождение группы заранее',
+]
+
+export const companyServices: CompanyService[] = [
+  {
+    id: 'BMtours',
+    title: 'Туры по всему миру',
+    kicker: 'Travel planning',
+    description:
+      'Подбираем готовые и индивидуальные туры под бюджет, сезон, состав гостей и стиль отдыха.',
+    image:
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+    details: ['пляжный отдых', 'экскурсионные маршруты', 'семейные и VIP-программы'],
+  },
+  {
+    id: 'BMtickets',
+    title: 'Авиабилеты',
+    kicker: 'Flights',
+    description:
+      'Ищем удобные рейсы, стыковки и тарифы, помогаем с багажом, местами и изменениями маршрута.',
+    image:
+      'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80',
+    details: ['регулярные рейсы', 'сложные маршруты', 'поддержка при переносах'],
+  },
+  {
+    id: 'BMvisa',
+    title: 'Визовая поддержка',
+    kicker: 'Visa support',
+    description:
+      'Объясняем требования страны, готовим список документов и сопровождаем клиента до подачи.',
+    image:
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80',
+    details: ['анкеты и запись', 'проверка документов', 'правила въезда'],
+  },
+  {
+    id: 'BMinsurance',
+    title: 'Страхование',
+    kicker: 'Travel safety',
+    description:
+      'Подбираем полис под страну, длительность поездки, активный отдых и требования консульства.',
+    image:
+      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80',
+    details: ['медицина за рубежом', 'активный отдых', 'страховые случаи'],
+  },
+  {
+    id: 'BMhotels',
+    title: 'Luxury отели',
+    kicker: 'Hotels',
+    description:
+      'Выбираем отели не по случайным отзывам, а по задаче поездки: пляж, город, дети, тишина, сервис.',
+    image:
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
+    details: ['5* резорты', 'бутик-отели', 'номера и виллы'],
+  },
+  {
+    id: 'BMvip-transfers',
+    title: 'VIP трансферы',
+    kicker: 'Premium mobility',
+    description:
+      'Организуем комфортную встречу в аэропорту, персонального водителя и транспорт бизнес-класса.',
+    image:
+      'https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=80',
+    details: ['аэропорт-отель', 'семейные поездки', 'представительский класс'],
+  },
+  {
+    id: 'transfers',
+    title: 'Трансферы по Кыргызстану',
+    kicker: 'Kyrgyzstan routes',
+    description:
+      'Подаем седаны, минивэны, микроавтобусы и автобусы для города, регионов, аэропорта и групп.',
+    image:
+      'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80',
+    details: ['Манас', 'Иссык-Куль', 'Ош и регионы'],
+  },
+]
+
+export const homeExperiences: HomeExperience[] = [
+  {
+    title: 'Отдых для семьи',
+    text: 'Подбираем перелет без утомительных стыковок, отель с правильной инфраструктурой и индивидуальный трансфер.',
+    image:
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    title: 'Премиальные поездки',
+    text: 'Собираем маршрут с отелями высокого уровня, приватными трансферами, экскурсиями и понятной логистикой.',
+    image:
+      'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    title: 'Деловые маршруты',
+    text: 'Помогаем с билетами, гостиницами, встречей гостей и точным графиком передвижений.',
+    image:
+      'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80',
+  },
+]
+
+export const planningSteps = [
+  {
+    title: 'Разбираем задачу',
+    text: 'Уточняем даты, направление, состав путешественников, бюджет, визовые требования и ожидания от отдыха.',
+  },
+  {
+    title: 'Собираем маршрут',
+    text: 'Сравниваем перелеты, отели, трансферы, страховку и дополнительные услуги в единую понятную программу.',
+  },
+  {
+    title: 'Ведем поездку',
+    text: 'Остаемся на связи по документам, времени вылета, заселению, встрече в аэропорту и изменениям по маршруту.',
+  },
 ]
 
 export type TourRoute = {

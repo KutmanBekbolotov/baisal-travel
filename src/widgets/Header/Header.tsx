@@ -45,7 +45,7 @@ export function Header({ activePage, onNavigate }: HeaderProps) {
 
         <div className="header-actions">
           <button className="header-cta" type="button" onClick={() => handleNavigate('contacts')}>
-            Заказать трансфер
+            Оставить заявку
           </button>
 
           <button 

@@ -3,8 +3,8 @@ export function Footer() {
     <footer className="site-footer">
       <div>
         <strong>BaisalTravel</strong>
-        <p>Трансферы и пассажирские перевозки по Кыргызстану.</p>
-        <p>Наш адрес: ул.Аалы Токомбаева 21/2 (отель Jannat Regency 5*</p>
+        <p>Туры, авиабилеты, визы, страховка, отели и трансферы под ключ.</p>
+        <p>Наш адрес: ул. Аалы Токомбаева 21/2, отель Jannat Regency 5*</p>
       </div>
       <div className="footer-links">
         <a href="mailto:baisaltravel@gmail.com">baisaltravel@gmail.com</a>

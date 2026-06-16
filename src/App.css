@@ -662,6 +662,14 @@ body {
   max-width: 720px;
 }
 
+.section-lead {
+  max-width: 360px;
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
 
 .tour-grid {
   display: grid;
@@ -671,11 +679,14 @@ body {
 
 
 .tour-card,
+.company-service-card,
+.experience-card,
 .route-card,
 .fleet-card,
 .about-grid article,
 .contact-card,
-.lead-form {
+.lead-form,
+.home-cta {
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -688,8 +699,11 @@ body {
 
 /* Shimmer border on hover */
 .tour-card::before,
+.company-service-card::before,
+.experience-card::before,
 .fleet-card::before,
-.about-grid article::before {
+.about-grid article::before,
+.home-cta::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -705,16 +719,22 @@ body {
 }
 
 .tour-card:hover::before,
+.company-service-card:hover::before,
+.experience-card:hover::before,
 .fleet-card:hover::before,
-.about-grid article:hover::before {
+.about-grid article:hover::before,
+.home-cta:hover::before {
   opacity: 1;
 }
 
 .tour-card:hover,
+.company-service-card:hover,
+.experience-card:hover,
 .route-card:hover,
 .fleet-card:hover,
 .about-grid article:hover,
-.contact-card:hover {
+.contact-card:hover,
+.home-cta:hover {
   border-color: rgba(103, 232, 249, 0.18);
   box-shadow:
     0 20px 60px rgba(0,0,0,0.35),
@@ -726,6 +746,99 @@ body {
 
 .tour-card {
   overflow: hidden;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.company-service-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.company-service-card.featured {
+  grid-column: span 2;
+}
+
+.company-service-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.company-service-image::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: linear-gradient(180deg, transparent 45%, rgba(7, 17, 18, 0.62));
+  pointer-events: none;
+}
+
+.company-service-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.55;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.company-service-card:hover img {
+  transform: scale(1.06);
+}
+
+.company-service-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.company-service-body h3,
+.experience-card h3,
+.service-item h3 {
+  margin: 8px 0 10px;
+  color: var(--text-strong);
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+
+.company-service-body p,
+.experience-copy p,
+.experience-card p,
+.home-cta p {
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.company-service-body ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 18px 0 24px;
+  list-style: none;
+}
+
+.company-service-body li {
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: var(--text-strong);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.company-service-body .ghost-btn {
+  width: fit-content;
+  margin-top: auto;
 }
 
 .tour-card img {
@@ -759,6 +872,7 @@ body {
 }
 
 .tour-card-body span,
+.company-service-body span,
 .route-location,
 .fleet-card > span,
 .about-grid span,
@@ -831,6 +945,93 @@ body {
 .service-item:hover span {
   color: var(--accent);
   text-shadow: 0 0 20px rgba(103,232,249,0.4);
+}
+
+.service-item h3 {
+  font-size: 20px;
+}
+
+.experience-section {
+  display: grid;
+  grid-template-columns: 0.74fr 1.26fr;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.experience-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100%;
+  padding: 34px;
+  border-left: 1px solid rgba(103, 232, 249, 0.28);
+  background: linear-gradient(90deg, rgba(103, 232, 249, 0.08), transparent);
+}
+
+.experience-copy h2,
+.home-cta h2 {
+  margin: 0 0 22px;
+  color: var(--text-strong);
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.experience-copy .primary-btn {
+  margin-top: 28px;
+}
+
+.experience-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.experience-card {
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.experience-card:nth-child(2) {
+  margin-top: 34px;
+}
+
+.experience-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.95;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.experience-card:hover img {
+  transform: scale(1.05);
+}
+
+.experience-card div {
+  padding: 20px;
+}
+
+.home-cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: center;
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto 92px;
+  padding: 34px;
+  overflow: hidden;
+}
+
+.home-cta h2 {
+  max-width: 780px;
+}
+
+.home-cta p {
+  max-width: 680px;
 }
 
 
@@ -1140,7 +1341,10 @@ body {
 .section,
 .stats-strip,
 .hero-content,
-.hero-media {
+.hero-media,
+.company-service-card,
+.experience-card,
+.home-cta {
   animation: fade-up 0.7s ease both;
 }
 
@@ -1156,6 +1360,7 @@ body {
   .mobile-main-links { display: flex; }
 
   .hero-section,
+  .experience-section,
   .split-section,
   .contact-layout,
   .route-card {
@@ -1176,9 +1381,33 @@ body {
 
   .stats-strip,
   .tour-grid,
+  .service-cards,
   .transfer-overview,
-  .about-grid {
+  .about-grid,
+  .experience-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .company-service-card.featured {
+    grid-column: auto;
+  }
+
+  .company-service-image img {
+    aspect-ratio: 1.35;
+  }
+
+  .experience-copy {
+    padding: 28px 0 28px 24px;
+  }
+
+  .experience-card,
+  .experience-card:nth-child(2) {
+    min-height: auto;
+    margin-top: 0;
+  }
+
+  .experience-card img {
+    aspect-ratio: 1.45;
   }
 
   .stats-strip div {
@@ -1190,9 +1419,14 @@ body {
 
   .section-heading,
   .transfer-request,
-  .site-footer {
+  .site-footer,
+  .home-cta {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .section-lead {
+    max-width: 100%;
   }
 
   .route-card img { min-height: 220px; }
@@ -1223,6 +1457,21 @@ body {
   .section,
   .page-shell {
     padding-block: 56px;
+  }
+
+  .company-service-body {
+    padding: 20px;
+  }
+
+  .company-service-body .ghost-btn,
+  .home-cta .primary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .home-cta {
+    margin-bottom: 56px;
+    padding: 24px;
   }
 }
 
