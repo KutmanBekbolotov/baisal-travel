@@ -2,7 +2,11 @@ export const BMtoursPage = () => {
   return (
     <main className="page-shell">
       <div className="page-hero">
-        <h1>Туры по всему миру<br /> <br /></h1>
+        <h1>Туры по всему миру</h1>
+         <p className="hero-copy">
+            Организуем путешествия под ключ: туры по миру, авиабилеты, визовую поддержку,
+            страховку, отели, VIP-трансферы и поездки по Кыргызстану.
+          </p>
         <h2>❌ Ловить «горящие» туры Почему это ошибка: </h2>
         <section className="about-grid">
 
