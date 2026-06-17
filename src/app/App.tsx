@@ -52,7 +52,7 @@ function App() {
     <div className="app">
       <GradientBlinds
         className="app-background"
-        gradientColors={['#0095ff', '#C94040']}
+        gradientColors={['#0095ff', '#ff0000']}
         angle={30}
         noise={0.08}
         blindCount={18}

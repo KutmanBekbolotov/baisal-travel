@@ -12,7 +12,7 @@
   --text: rgba(17, 17, 17, 0.72);
   --text-muted: rgba(17, 17, 17, 0.42);
   --border: rgba(17, 17, 17, 0.09);
-  --border-hover: rgba(74, 143, 191, 0.3);
+  --border-hover: rgba(23, 142, 227, 0.3);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -93,7 +93,7 @@ body {
   padding: 12px 24px;
   backdrop-filter: blur(16px) saturate(1.4);
   -webkit-backdrop-filter: blur(16px) saturate(1.4);
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.125);
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-bottom-color: rgba(17, 17, 17, 0.05);
   border-radius: 20px;
@@ -104,10 +104,10 @@ body {
 }
 
 .site-header:hover {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.486);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
-    0 32px 64px rgba(17,17,17,0.13);
+    0 32px 64px rgba(17, 17, 17, 0.192);
 }
 
 .brand,
@@ -190,7 +190,7 @@ body {
   width: 18px;
   height: 2px;
   border-radius: 1px;
-  background: linear-gradient(90deg, #4A8FBF, #C94040);
+  background: linear-gradient(90deg, #292929, #6c6c6c);
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -217,7 +217,7 @@ body {
   padding: 0 22px;
   border-radius: 999px;
   color: #ffffff;
-  background: linear-gradient(135deg, #C94040 0%, #a83232 100%);
+  background: linear-gradient(135deg, #C94040 0%, #e23737 100%);
   box-shadow:
     0 0 0 1px rgba(201, 64, 64, 0.3),
     0 8px 28px rgba(201, 64, 64, 0.22),
@@ -320,7 +320,7 @@ body {
 
 .burger-trigger.open .burger-line:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
-  background: linear-gradient(90deg, #4A8FBF, #C94040);
+  background: linear-gradient(10deg, #440000,  #ff0000);
 }
 
 .burger-trigger.open .burger-line:nth-child(2) {
@@ -330,7 +330,7 @@ body {
 
 .burger-trigger.open .burger-line:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
-  background: linear-gradient(90deg, #4A8FBF, #C94040);
+  background: linear-gradient(90deg, #ff0000, #440000);
 }
 
 .burger-menu {
@@ -339,12 +339,12 @@ body {
   left: 100vw;
   width: min(360px, 100vw);
   height: 100vh;
-  background: rgba(250, 248, 245, 0.95);
-  backdrop-filter: blur(24px) saturate(1.4);
+  background: rgba(250, 248, 245, 0.363);
+  backdrop-filter: blur(10px) saturate(1.4);
   -webkit-backdrop-filter: blur(24px) saturate(1.4);
   border-left: 1px solid rgba(17, 17, 17, 0.08);
   padding: 100px 30px 40px 40px;
-  box-shadow: -20px 0 60px rgba(17, 17, 17, 0.12);
+  box-shadow: -20px 0 60px rgba(17, 17, 17, 0.126);
   box-sizing: border-box;
   z-index: 105;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -550,8 +550,8 @@ body {
   padding: 16px 20px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.34);
+  backdrop-filter: blur(12px);
   box-shadow: 0 8px 32px rgba(17,17,17,0.12);
 }
 
@@ -566,7 +566,7 @@ body {
   color: var(--text-strong);
   font-size: 30px;
   font-weight: 800;
-  background: linear-gradient(135deg, #4A8FBF, #C94040);
+  background: linear-gradient(135deg, #555555, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -679,6 +679,8 @@ body {
   backdrop-filter: blur(12px);
   transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
   overflow: hidden;
+  background-color: #ffffff2d;
+   transition: all 500ms;
 }
 
 .tour-card::before,
@@ -699,6 +701,7 @@ body {
   opacity: 0;
   transition: opacity 0.4s;
   pointer-events: none;
+ 
 }
 
 .tour-card:hover::before,
@@ -718,9 +721,10 @@ body {
 .about-grid article:hover,
 .contact-card:hover,
 .home-cta:hover {
-  border-color: rgba(74, 143, 191, 0.25);
+  backdrop-filter: blur(8px);
+  border-color: rgba(0, 149, 255, 0.25);
   box-shadow:
-    0 12px 40px rgba(17,17,17,0.1),
+    0 12px 40px rgba(0, 140, 255, 0.1),
     0 0 0 1px rgba(74,143,191,0.08),
     0 0 30px rgba(74,143,191,0.05);
   transform: translateY(-2px);
@@ -1322,7 +1326,8 @@ body {
 
 @media (max-width: 860px) {
   .burger-menu {
-    background: rgba(250, 248, 245, 0.97);
+    background: rgba(250, 248, 245, 0.293);
+    backdrop-filter: blur(15px);
   }
 
   .main-nav { display: none; }
@@ -1403,7 +1408,8 @@ body {
 
 @media (max-width: 560px) {
   .burger-menu {
-    background: rgba(250, 248, 245, 0.99);
+    background: rgba(250, 248, 245, 0.293);
+    backdrop-filter: blur(25px);
   }
 
   .header-cta { display: none; }

@@ -21,7 +21,7 @@ export const ToursPage = ({ onNavigate }: ToursPageProps) => {
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" 
           alt="World Map" 
-          style={{ width: '100%', display: 'block', filter: 'invert(1) opacity(0.15)' }} 
+          style={{ width: '100%', display: 'block', filter: 'invert(0) opacity(0.45)' }} 
         />
         
         <svg 
@@ -30,35 +30,35 @@ export const ToursPage = ({ onNavigate }: ToursPageProps) => {
         >
           <defs>
             <linearGradient id="flight-path" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#bef264" stopOpacity="0.9" />
-              <stop offset="100%" stopColor="#67e8f9" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="#2d6a96;" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#0095ff" stopOpacity="0.2" />
             </linearGradient>
           </defs>
           
-          <circle cx="680" cy="180" r="5" fill="#bef264">
+          <circle cx="680" cy="180" r="5" fill="#2d6a96;">
             <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite" />
             <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
           </circle>
-          <circle cx="680" cy="180" r="3" fill="#fff" />
-          <text x="690" y="172" fontSize="14" fontWeight="800" fill="#f9fafb" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>Бишкек</text>
+          <circle cx="680" cy="180" r="3" fill="#a83232" />
+          <text x="690" y="172" fontSize="14" fontWeight="800" fill="#f9fafb" style={{ textShadow: '0 2px 10px rgba(0, 113, 189, 0.8)' }}>Бишкек</text>
 
           <path d="M 680 180 Q 600 120 530 160" fill="transparent" stroke="url(#flight-path)" strokeWidth="2" strokeDasharray="4,4" />
-          <circle cx="530" cy="160" r="3" fill="#67e8f9" />
+          <circle cx="530" cy="160" r="3" fill="#2d6a96" />
           
           <path d="M 680 180 Q 750 230 800 290" fill="transparent" stroke="url(#flight-path)" strokeWidth="2" strokeDasharray="4,4" />
-          <circle cx="800" cy="290" r="3" fill="#67e8f9" />
+          <circle cx="800" cy="290" r="3" fill="#2d6a96" />
 
           <path d="M 680 180 Q 640 220 620 250" fill="transparent" stroke="url(#flight-path)" strokeWidth="2" strokeDasharray="4,4" />
-          <circle cx="620" cy="250" r="3" fill="#67e8f9" />
+          <circle cx="620" cy="250" r="3" fill="#2d6a96" />
 
           <path d="M 680 180 Q 685 270 690 350" fill="transparent" stroke="url(#flight-path)" strokeWidth="2" strokeDasharray="4,4" />
-          <circle cx="690" cy="350" r="3" fill="#67e8f9" />
+          <circle cx="690" cy="350" r="3" fill="#2d6a96" />
 
           <path d="M 680 180 Q 550 250 510 320" fill="transparent" stroke="url(#flight-path)" strokeWidth="2" strokeDasharray="4,4" />
-          <circle cx="510" cy="320" r="3" fill="#67e8f9" />
+          <circle cx="510" cy="320" r="3" fill="#2d6a96" />
 
           <path d="M 680 180 Q 550 180 320 310" fill="transparent" stroke="url(#flight-path)" strokeWidth="2" strokeDasharray="4,4" />
-          <circle cx="320" cy="310" r="3" fill="#67e8f9" />
+          <circle cx="320" cy="310" r="3" fill="#2d6a96" />
         </svg>
       </section>
 

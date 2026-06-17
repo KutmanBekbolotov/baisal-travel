@@ -26,6 +26,7 @@ export function Header({ activePage, onNavigate }: HeaderProps) {
           onClick={() => handleNavigate('home')}
           aria-label="Перейти на главную"
         >
+          <img src='../../assets/photo_2026-06-17_11-38-26.png' alt="" />
           <span className="brand-mark">NT</span>
           <span>BaisalTravel</span>
         </button>
