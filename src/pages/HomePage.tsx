@@ -136,8 +136,8 @@ function HomePage({ onNavigate }: HomePageProps) {
           </div>
           <button className="ghost-btn" type="button" onClick={() => onNavigate('tours')}>
             Все туры
-          </button>
-        </div>
+            </button>
+          </div>
         <div className="tour-grid">
           {featuredTours.map((tour) => (
             <article className="tour-card" key={tour.title}>

@@ -52,7 +52,7 @@ function App() {
     <div className="app">
       <GradientBlinds
         className="app-background"
-        gradientColors={appGradientColors}
+        gradientColors={['#0095ff', '#C94040']}
         angle={30}
         noise={0.08}
         blindCount={18}
@@ -63,7 +63,7 @@ function App() {
         mouseDampening={0.28}
         distortAmount={18}
         shineDirection="left"
-        mixBlendMode="screen"
+        mixBlendMode="exclusion"
       />
       <Header activePage={activePage} onNavigate={setActivePage} />
       {renderPage()}
