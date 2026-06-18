@@ -22,22 +22,6 @@ function HomePage({ onNavigate }: HomePageProps) {
   return (
     <main>
       <section className="hero-section">
-        <div className="hero-media" aria-hidden="true">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80"
-          >
-            <source src="/hero-timelapse.webm" type="video/webm" />
-          </video>
-          <div className="orbit-panel">
-            <span>Full travel service</span>
-            <strong>7 услуг</strong>
-          </div>
-        </div>
-
         <div className="hero-content">
           <p className="eyebrow">BaisalTravel concierge / 2026</p>
           <img style={{width: '100%',}} src={logoHeader} alt="" />
@@ -52,6 +36,22 @@ function HomePage({ onNavigate }: HomePageProps) {
             <button className="ghost-btn" type="button" onClick={scrollToServices}>
               Смотреть услуги
             </button>
+          </div>
+        </div>
+
+        <div className="hero-media" aria-hidden="true">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80"
+          >
+            <source src="/hero-timelapse.webm" type="video/webm" />
+          </video>
+          <div className="orbit-panel">
+            <span>Full travel service</span>
+            <strong>7 услуг</strong>
           </div>
         </div>
       </section>
@@ -137,8 +137,8 @@ function HomePage({ onNavigate }: HomePageProps) {
           </div>
           <button className="ghost-btn" type="button" onClick={() => onNavigate('tours')}>
             Все туры
-            </button>
-          </div>
+          </button>
+        </div>
         <div className="tour-grid">
           {featuredTours.map((tour) => (
             <article className="tour-card" key={tour.title}>

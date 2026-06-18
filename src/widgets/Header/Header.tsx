@@ -27,7 +27,12 @@ export function Header({ activePage, onNavigate }: HeaderProps) {
           onClick={() => handleNavigate('home')}
           aria-label="Перейти на главную"
         >
+
           <img className='logo-header' src={logoHeader} alt="" />
+
+          <span className="brand-mark">BT</span>
+          <span>BaisalTravel</span>
+
         </button>
 
         <nav className="main-nav" aria-label="Основная навигация">
