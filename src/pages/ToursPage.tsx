@@ -21,16 +21,16 @@ export const ToursPage = ({ onNavigate }: ToursPageProps) => {
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" 
           alt="World Map" 
-          style={{ width: '100%', display: 'block', filter: 'invert(0) opacity(0.45)' }} 
+          className="world-map-image"
         />
         
         <svg 
           viewBox="0 0 1000 500" 
-          style={{ position: 'absolute', top: -52, left: 0, width: '100%', height: '100%' }}
+          className="world-map-routes"
         >
           <defs>
             <linearGradient id="flight-path" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#2d6a96;" stopOpacity="0.9" />
+              <stop offset="0%" stopColor="#2d6a96" stopOpacity="0.9" />
               <stop offset="100%" stopColor="#0095ff" stopOpacity="0.2" />
             </linearGradient>
           </defs>
@@ -40,7 +40,7 @@ export const ToursPage = ({ onNavigate }: ToursPageProps) => {
             <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
           </circle>
           <circle cx="680" cy="180" r="3" fill="#a83232" />
-          <text x="690" y="172" fontSize="14" fontWeight="800" fill="#f9fafb" style={{ textShadow: '0 2px 10px rgba(0, 113, 189, 0.8)' }}>Бишкек</text>
+          <text x="690" y="172" className="map-city-label">Бишкек</text>
 
           <path d="M 680 180 Q 600 120 530 160" fill="transparent" stroke="url(#flight-path)" strokeWidth="2" strokeDasharray="4,4" />
           <circle cx="530" cy="160" r="3" fill="#2d6a96" />
@@ -66,30 +66,28 @@ export const ToursPage = ({ onNavigate }: ToursPageProps) => {
         {worldTours.map((tour) => (
           <article className="route-card" key={tour.title}>
             <img src={tour.image} alt={tour.title} />
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className="route-card-content">
               <span className="route-location">{tour.destination}</span>
               <h2>{tour.title}</h2>
               <p className="route-meta">{tour.duration}</p>
-              <p style={{ marginBottom: '16px' }}>{tour.note}</p>
-              <ul style={{ marginBottom: 'auto' }}>
+              <p>{tour.note}</p>
+              <ul>
                 {tour.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
                 ))}
               </ul>
               
-              <div style={{ display: 'flex', gap: '12px', marginTop: '26px' }}>
-              <button 
+              <div className="route-card-actions">
+                <button
                   className="primary-btn" 
                   type="button" 
-                  style={{ flex: 1, justifyContent: 'center' }} 
                   onClick={() => onNavigate('contacts')}
                 >
                   Купить билеты
                 </button>
-                <button 
+                <button
                   className="ghost-btn" 
                   type="button" 
-                  style={{ flex: 1, justifyContent: 'center' }} 
                   onClick={() => onNavigate('contacts')}
                 >
                   Подробнее
