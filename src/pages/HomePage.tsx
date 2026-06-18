@@ -7,6 +7,7 @@ import {
   worldTours,
 } from '../shared/model/travel'
 import type { PageId } from '../shared/model/navigation'
+import logoHeader from '../assets/photo_2026-06-17_11-38-26.png'
 
 type HomePageProps = {
   onNavigate: (page: PageId) => void
@@ -39,7 +40,7 @@ function HomePage({ onNavigate }: HomePageProps) {
 
         <div className="hero-content">
           <p className="eyebrow">BaisalTravel concierge / 2026</p>
-          <h1>BaisalTravel</h1>
+          <img style={{width: '100%',}} src={logoHeader} alt="" />
           <p className="hero-copy">
             Организуем путешествия под ключ: туры по миру, авиабилеты, визовую поддержку,
             страховку, отели, VIP-трансферы и поездки по Кыргызстану.

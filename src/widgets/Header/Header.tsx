@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { PageId } from '../../shared/model/navigation'
 import { navItems, burgerLinks } from '../../shared/model/navigation'
+import logoHeader from '../../assets/photo_2026-06-17_11-38-26.png'
 
 type HeaderProps = {
   activePage: PageId
@@ -26,9 +27,7 @@ export function Header({ activePage, onNavigate }: HeaderProps) {
           onClick={() => handleNavigate('home')}
           aria-label="Перейти на главную"
         >
-          <img src='../../assets/photo_2026-06-17_11-38-26.png' alt="" />
-          <span className="brand-mark">NT</span>
-          <span>BaisalTravel</span>
+          <img className='logo-header' src={logoHeader} alt="" />
         </button>
 
         <nav className="main-nav" aria-label="Основная навигация">

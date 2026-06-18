@@ -262,6 +262,10 @@ body {
   transform: translateY(0) scale(0.98);
 }
 
+.logo-header{
+  width: 120px;
+}
+
 .ghost-btn {
   position: relative;
   min-height: 40px;
