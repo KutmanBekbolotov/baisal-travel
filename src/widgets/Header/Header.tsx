@@ -27,7 +27,7 @@ export function Header({ activePage, onNavigate }: HeaderProps) {
           onClick={() => handleNavigate('home')}
           aria-label="Перейти на главную"
         >
-          <img className='logo-header' src={logoHeader} alt="" />
+          <img className='logo-header' src={logoHeader} alt="BasialTravel" />
         </button>
 
         <nav className="main-nav" aria-label="Основная навигация">

@@ -24,7 +24,7 @@ function HomePage({ onNavigate }: HomePageProps) {
       <section className="hero-section">
         <div className="hero-content">
           <p className="eyebrow">BaisalTravel concierge / 2026</p>
-          <img style={{width: '100%',}} src={logoHeader} alt="" />
+          <img style={{width: '100%',}} src={logoHeader} alt="BasialTravel" />
           <p className="hero-copy">
             Организуем путешествия под ключ: туры по миру, авиабилеты, визовую поддержку,
             страховку, отели, VIP-трансферы и поездки по Кыргызстану.
