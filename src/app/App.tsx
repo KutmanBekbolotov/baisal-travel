@@ -16,8 +16,6 @@ import { BMhotelsPage } from '../pages/BMhotelsPage'
 import { BMviptransfersPage } from '../pages/BMviptransfersPage'
 import '../App.css'
 
-const appGradientColors = ['#67e8f9', '#bef264', '#fb7185', '#5227ff']
-
 function App() {
   const [activePage, setActivePage] = useState<PageId>('home')
 
